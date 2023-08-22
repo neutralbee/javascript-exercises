@@ -1,18 +1,16 @@
-const removeFromArray = function(inputArray, ...unwantedItems) {
-let outputArray = new Array();
-  
-  for (let i = 0; i < inputArray.length; i++) {
-    let arrayItem = inputArray[i];
+const removeFromArray = function(array, ...unwantedItems) {
+  for (let i = 0; i < array.length; i++) {
+    let arrayItem = array[i];
     for (const searchItem of unwantedItems) {
       if (searchItem === arrayItem) {
-        inputArray.splice(i,1);
+        array.splice(i,1);
         i--;
       } else {
         continue;
       }
     }
   }
-return inputArray;
+  return array;
 };
 
 // Do not edit below this line
